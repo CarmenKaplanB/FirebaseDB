@@ -1,0 +1,120 @@
+$def with(result)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ETIQUETAS REQUERIDAS -->
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- OBTENCION DE ESTILOS - BULMA -->
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+        <title>Kaplan B. Agenda</title>
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/MariaDelCarmenHernandezDiaz/Recursos-Test/main/Personal%20B/Kaplan-B.-_1_.ico">
+    </head>
+    
+    <center>
+        <br>
+        <figure class="image is-128x128">
+          <img class="is-rounded is-success" src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/Personal%20B/Kaplan%20B.gif?raw=true" alt="Kaplan B. Logo">
+        </figure>
+        <br>
+    </center>
+    
+    
+    <!-- MENU - ESTILO:TABS -->
+    
+    <div class="tabs is-centered is-boxed">
+        <ul>
+            <li class="">
+                <a href="/index">
+                <span class="icon is-small"><i class="fas fa-home" aria-hidden="false"></i></span>
+                <span class="link is-info">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="/registro">
+                <span class="icon is-small"><i class="fas fa-train" aria-hidden="false"></i></span>
+                <span>Registrate</span>
+                </a>
+            </li>
+            <li>
+                <a href="/vista">
+                <span class="icon is-small"><i class="fas fa-flag-checkered" aria-hidden="false"></i></span>
+                <span>Registrados</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- HERO - CABECERA -->
+
+<section class="hero is-small" style="background-color: #6567C6">
+    <div class="hero-body">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-four-fifths">
+          <p class="title" style="color:#FFFFFF">
+            Registrados,
+          </p>
+          <p class="subtitle" style="color:#FFFFFF">
+            ¡Todos ellos han sido registrados!
+          </p>
+        </div>
+        <div class="column"></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+
+    <div class="table-container">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+            <thead class="is-selected">
+                <th>Id</th>
+                <th>Email</th>
+                <th>Nombre</th>
+            </thead>
+            <tbody>
+                $for row in result.each():
+                <tr>
+                    <td>$row.key()</td>
+                    <td>$row.val()['email']</td>
+                    <td>$row.val()['nombre']</td>
+                </tr>                 
+            </tbody>
+        </table>
+    </div>
+
+<!-- PIE DE PAGINA -->
+<footer class="footer is-white" style="background-color: #6567C6">
+    <nav class="content is-fullwidth has-text-centered">
+        
+          <!-- HIPERVINCULO HACIA LA PAGINA OFICIAL -->
+          <div class="columns">
+            
+            <div class="column is-three-fifths">
+              <a class="has-text-weight-bold" href="/index">
+                <img src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/Personal%20B/Kaplan%20B.%20V..gif?raw=true" width="180" height="180" alt="Kaplan B. Logo">
+              </a>
+            </div>
+            
+            <div class="column" style="color:#FFFFFF">
+              Plataforma creada con 
+              <b><a href="https://bulma.io/" style="color:#FFFFFF">Bulma.<br></a></b>
+              Hernandez Diaz Maria del Carmen 
+              <br> Matricula: <b>1718110389</b>
+              <br> Correo electronico: 1718110389@utectulancingo.edu.mx
+            </div>
+            
+            <div class="column"></div>
+          </div>
+            
+    </nav>
+</footer>
+
+</html>
